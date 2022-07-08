@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import PageHeading from '../../components/PageHeading';
 import s from './Container.module.css';
 
 export default function Container({ title, children }) {
   return (
     <div className={s.container}>
-      {title && <h1 className={s.title}>{title}</h1>}
+      <PageHeading text={title} />
       {children}
     </div>
   );

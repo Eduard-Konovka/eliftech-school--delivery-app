@@ -1,0 +1,11 @@
+.shop {
+  width: 200px;
+  height: 50px;
+  border: 1px solid #757575;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+
+  font-size: 18px;
+  text-align: center;
+}

@@ -1,10 +1,6 @@
-import PageHeading from '../components/PageHeading/PageHeading';
-
-export default function HomeView() {
+export default function CartView() {
   return (
     <>
-      <PageHeading text="Home title" />
-
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vel velit
         nihil illo est! Quos cum rerum dolores voluptates odio iste est nam.

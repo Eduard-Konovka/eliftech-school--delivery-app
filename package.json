@@ -1,5 +1,5 @@
 {
-  "name": "react-default",
+  "name": "eliftech-school--delivery-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -33,13 +33,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eduard-Konovka/react-default.git"
+    "url": "git+https://github.com/Eduard-Konovka/eliftech-school--delivery-app.git"
   },
   "author": "Eduard Konovka <ed098ua@gmail.com>",
   "bugs": {
-    "url": "https://github.com/Eduard-Konovka/react-default/issues"
+    "url": "https://github.com/Eduard-Konovka/eliftech-school--delivery-app/issues"
   },
-  "homepage": "https://Eduard-Konovka.github.io/react-default",
+  "homepage": "https://Eduard-Konovka.github.io/eliftech-school--delivery-app",
   "eslintConfig": {
     "extends": [
       "react-app",

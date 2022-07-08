@@ -4,19 +4,24 @@ import { ToastContainer } from 'react-toastify';
 import Loader from 'react-loader-spinner';
 import Container from './components/Container';
 import AppBar from './components/AppBar/AppBar';
-import errorImage from './pages/error.jpg';
+import errorImage from './pages/NotFoundView/error.jpg';
 import './App.css';
 
-const HomeView = lazy(() =>
-  import('./pages/HomeView.jsx' /* webpackChunkName: "HomeView" */),
+const ShopView = lazy(() =>
+  import('./pages/ShopView/ShopView.jsx' /* webpackChunkName: "ShopView" */),
+);
+const CartView = lazy(() =>
+  import('./pages/CartView/CartView.jsx' /* webpackChunkName: "CartView" */),
 );
 const NotFoundView = lazy(() =>
-  import('./pages/NotFoundView.jsx' /* webpackChunkName: "NotFoundView" */),
+  import(
+    './pages/NotFoundView/NotFoundView.jsx' /* webpackChunkName: "NotFoundView" */
+  ),
 );
 
 export default function App() {
   return (
-    <Container title="Hello world!">
+    <Container title="Delivery App">
       <AppBar />
 
       <Suspense
@@ -31,13 +36,14 @@ export default function App() {
         }
       >
         <Routes>
-          <Route path="" element={<HomeView />} />
+          <Route path="" element={<ShopView />} />
+          <Route path="/cart" element={<CartView />} />
           <Route
             path="*"
             element={
               <NotFoundView
                 errorImage={errorImage}
-                messadge="Ошибка 404: страница не найдена :("
+                messadge="Page not found :("
               />
             }
           />
