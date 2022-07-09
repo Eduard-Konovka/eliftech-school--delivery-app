@@ -27,8 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build",
     "predeploy": "npm run build",
+    "deploy": "netlify deploy -p",
     "prepare": "husky install"
   },
   "repository": {
@@ -39,7 +39,7 @@
   "bugs": {
     "url": "https://github.com/Eduard-Konovka/eliftech-school--delivery-app/issues"
   },
-  "homepage": "https://Eduard-Konovka.github.io/eliftech-school--delivery-app",
+  "homepage": "https://eliftech-school-delivery-app-eduard-konovka.netlify.app",
   "eslintConfig": {
     "extends": [
       "react-app",
