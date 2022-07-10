@@ -2,13 +2,13 @@ import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Loader from 'react-loader-spinner';
-import Container from './components/Container';
-import AppBar from './components/AppBar/AppBar';
-import errorImage from './pages/NotFoundView/error.jpg';
-import './App.css';
+import Container from 'components/Container';
+import AppBar from 'components/AppBar/AppBar';
+import errorImage from 'pages/NotFoundView/error.jpg';
+import 'App.css';
 
-const ShopView = lazy(() =>
-  import('./pages/ShopView/ShopView.jsx' /* webpackChunkName: "ShopView" */),
+const ShopsView = lazy(() =>
+  import('./pages/ShopsView/ShopsView.jsx' /* webpackChunkName: "ShopsView" */),
 );
 const CartView = lazy(() =>
   import('./pages/CartView/CartView.jsx' /* webpackChunkName: "CartView" */),
@@ -26,17 +26,26 @@ export default function App() {
 
       <Suspense
         fallback={
-          <Loader
-            type="Puff"
-            color="#00BFFF"
-            height={100}
-            width={100}
-            timeout={3000}
-          />
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              paddingTop: '150px',
+            }}
+          >
+            <Loader
+              type="Puff"
+              color="#00BFFF"
+              height={200}
+              width={200}
+              timeout={3000}
+            />
+          </div>
         }
       >
         <Routes>
-          <Route path="" element={<ShopView />} />
+          <Route path="" element={<ShopsView />} />
           <Route path="/cart" element={<CartView />} />
           <Route
             path="*"
