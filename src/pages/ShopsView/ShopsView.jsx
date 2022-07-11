@@ -4,7 +4,7 @@ import ProductsBar from 'components/ProductsBar';
 import s from './ShopsView.module.css';
 
 export default function ShopsView() {
-  const [shopId, setShopId] = useState(1);
+  const [shopId, setShopId] = useState(null);
 
   return (
     <div className={s.shoppage}>

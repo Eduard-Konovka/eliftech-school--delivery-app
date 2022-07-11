@@ -3,10 +3,10 @@ import fetchProducts from 'api/productsApi';
 import Spinner from 'components/Spinner';
 import ProductsList from 'components/ProductsList';
 import Blank from 'components/Blank';
-import imageBlank from 'images/shop.jpg';
-import s from './ProductsBar.module.css';
+import imageBlank from 'images/cartEmpty.jpg';
+import s from './CartBar.module.css';
 
-export default function ProductsBar({ shopId }) {
+export default function CartBar({ shopId = null }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -23,11 +23,11 @@ export default function ProductsBar({ shopId }) {
   }, []);
 
   return (
-    <div className={s.productsbar}>
+    <div className={s.cartbar}>
       {error && <p>Whoops, something went wrong: {error.message}</p>}
       {loading && <Spinner size={70} color="blue" />}
       {shopId === null && (
-        <Blank title="Choose a shop" image={imageBlank} alt="Open shop" />
+        <Blank title="Your cart is empty" image={imageBlank} alt="Empty cart" />
       )}
       {products.length > 0 && (
         <ProductsList products={products} shopId={shopId} />

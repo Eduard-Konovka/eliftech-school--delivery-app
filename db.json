@@ -2,27 +2,27 @@
   "shops": [
     {
       "id": 1,
-      "title": "Food",
+      "title": "Food shop",
       "shopId": 1
     },
     {
       "id": 2,
-      "title": "Appliances",
+      "title": "Appliances shop",
       "shopId": 1
     },
     {
       "id": 3,
-      "title": "Tableware",
+      "title": "Tableware shop",
       "shopId": 1
     },
     {
       "id": 4,
-      "title": "Furniture",
+      "title": "Furniture shop",
       "shopId": 2
     },
     {
       "id": 5,
-      "title": "Automobiles",
+      "title": "Automobiles shop",
       "shopId": 2
     }
   ],
