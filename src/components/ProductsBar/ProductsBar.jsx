@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import fetchProducts from 'api/productsApi';
 import Spinner from 'components/Spinner';
 import ProductsList from 'components/ProductsList';
@@ -6,7 +7,7 @@ import Blank from 'components/Blank';
 import imageBlank from 'images/shop.jpg';
 import s from './ProductsBar.module.css';
 
-export default function ProductsBar({ shopId }) {
+export default function ProductsBar({ shopId, onClick }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -30,8 +31,13 @@ export default function ProductsBar({ shopId }) {
         <Blank title="Choose a shop" image={imageBlank} alt="Open shop" />
       )}
       {products.length > 0 && (
-        <ProductsList products={products} shopId={shopId} />
+        <ProductsList products={products} shopId={shopId} onClick={onClick} />
       )}
     </div>
   );
 }
+
+ProductsBar.propTypes = {
+  shopId: PropTypes.number,
+  onClick: PropTypes.func.isRequired,
+};

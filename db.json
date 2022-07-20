@@ -8,28 +8,28 @@
     {
       "id": 2,
       "title": "Appliances shop",
-      "shopId": 1
+      "shopId": 2
     },
     {
       "id": 3,
       "title": "Tableware shop",
-      "shopId": 1
+      "shopId": 3
     },
     {
       "id": 4,
       "title": "Furniture shop",
-      "shopId": 2
+      "shopId": 4
     },
     {
       "id": 5,
       "title": "Automobiles shop",
-      "shopId": 2
+      "shopId": 5
     }
   ],
   "products": [
     {
       "id": 1,
-      "imgUrl": "https://pixabay.com/get/g75db442ca1d682fc8d7a97422d2e6abe65ad4f7ac015894cb974a14829f24873e5210febe3cd29383d1c4aae734e1029_640.jpg",
+      "imgUrl": "https://pixabay.com/get/ge2345d5700eb3515ba68d8dfa750dba73fb4a93c35fe895d92d31f912206eb60364c119ec5badd756480bd13a29ec838_640.jpg",
       "title": "Berries",
       "descr": "Product description 1.1",
       "category": "1",
@@ -38,7 +38,7 @@
     },
     {
       "id": 2,
-      "imgUrl": "https://pixabay.com/get/g8f81100b10bccb0635cfa91d4ae0ac72b2dd58b47f0b98261f2bd1c46d4deef1f564e25617910145d728a6b2b36c73c5460714310357a27841a480148f3bf9ba_640.jpg",
+      "imgUrl": "https://pixabay.com/get/g400944b33be7ce8878844add7e9011a7586a8030e41e8239e3dc16fd9d27f3f3e1cfc6acf88622a5dee102b730a126e645aa4b250cb39155e544548be7fbf7fa_640.jpg",
       "title": "Coffee",
       "descr": "Product description 1.2",
       "category": "5",
@@ -47,7 +47,7 @@
     },
     {
       "id": 3,
-      "imgUrl": "https://pixabay.com/get/g86c8dc6e740f326371973aedcff242647ee1ad237b7cfe60033babaa8094b71cb6d99fd5dec12b68fd5e16ae8a385ef4_640.jpg",
+      "imgUrl": "https://pixabay.com/get/gc83cd31b621b7b0203ca42be098d97e76c40ada11734f6865da53ec8b99ca80b510d1c63e36a0a30f65548ab5cdd5a62_640.jpg",
       "title": "Olive oil",
       "descr": "Product description 1.3",
       "category": "2",
@@ -56,7 +56,7 @@
     },
     {
       "id": 4,
-      "imgUrl": "https://pixabay.com/get/gac327d0d8460c2acf356b69cc941a4dded0c66495424c36af9737941bc46d3f8f59e2b9071a3b7357adb2279176facc28c3fb111ea0240ac7670d1d8aebd52c3_640.jpg",
+      "imgUrl": "https://pixabay.com/get/gb9d014af6aa06fac20cce66140cd8521b1e59aa7f461a72dd90e4d18d0e14fc848ff2f6be14c5e4d9bc84506c0a66a46a22124a4491bb7eec9c6e760b8a869ba_640.jpg",
       "title": "Almonds",
       "descr": "Product description 1.4",
       "category": "3",
@@ -65,7 +65,7 @@
     },
     {
       "id": 5,
-      "imgUrl": "https://pixabay.com/get/g1e0259e7d8e095c80c183d66007dac5a4fc92be79b562e76e016b09076ced09ea4005a58e08665a529cabf9db4c255073f4a4c8dde767464d225fa5123c6062e_640.jpg",
+      "imgUrl": "https://pixabay.com/get/gbfd52249d73c153173f59d3b7d2a494c246f7dfaf617878feea15c3a7acc64bbd4351f63dbebc5edbc56d87dd12d7e97e4a683ed58b2759f955da6dc2a08ca50_640.jpg",
       "title": "Salmon",
       "descr": "Product description 1.5",
       "category": "4",
@@ -74,8 +74,8 @@
     },
     {
       "id": 6,
-      "imgUrl": "https://pixabay.com/get/gba19fc07d40c7ced563be056cded7fdf5bebfcf5427868b9fc0b8196db2ecaf11bca641333e522e90f336592d6c74e5a_640.jpg",
-      "title": "Coffee",
+      "imgUrl": "https://pixabay.com/get/g5557deb10c66f2e2e70bafb1ee015c067b671e5bb5e0fee78a909c818e0b613b24dba08123564ebfdfdba3dc5218894463a435b94bebddf5d02ff528f8fc4f4c_640.jpg",
+      "title": "Tea",
       "descr": "Product description 1.6",
       "category": "1",
       "price": 60,
@@ -83,7 +83,7 @@
     },
     {
       "id": 7,
-      "imgUrl": "https://pixabay.com/get/g28eef4d45283bdc3210b9a422f50d5d9fe9f13a2bf4be03ab29812b139c7c7bbf79770e07514ff00eb8c1276567cb6ed_640.jpg",
+      "imgUrl": "",
       "title": "Vacuum cleaner",
       "descr": "Product description 2.2",
       "category": "5",
@@ -92,7 +92,7 @@
     },
     {
       "id": 8,
-      "imgUrl": "https://pixabay.com/get/g5f541ed1a2e2b1f66d045c12b683e1b9c54d1dcd38505328500ae5cc2282261ebd27670ab556ec944172e36745bff098_640.jpg",
+      "imgUrl": "",
       "title": "Food mixer",
       "descr": "Product description 2.3",
       "category": "2",
@@ -101,7 +101,7 @@
     },
     {
       "id": 9,
-      "imgUrl": "https://pixabay.com/get/g932af0f29230835f17bf2c469b9153e8f89b171a5019314a1862f609e7ccd6966394c36c8bf8441b7b59d3a7912ca17b_640.jpg",
+      "imgUrl": "",
       "title": "Ironing",
       "descr": "Product description 2.4",
       "category": "3",
@@ -110,7 +110,7 @@
     },
     {
       "id": 10,
-      "imgUrl": "https://pixabay.com/get/geec9380bd00b4a7078b11a15b73c68783d27fcf02cb0edad7be5ea60f154d02f768bee05c998b4931fcb47bffb9d6dc4_640.jpg",
+      "imgUrl": "",
       "title": "Bread machine",
       "descr": "Product description 2.5",
       "category": "4",
@@ -119,7 +119,7 @@
     },
     {
       "id": 11,
-      "imgUrl": "https://pixabay.com/get/g35e0397db00c2e7c8c356f0b49863673f2ed7bf9e0d2b569a5536a9412c3ba745f5efdababd0ae8de9a7045978cf4bd9_640.jpg",
+      "imgUrl": "",
       "title": "Mugs",
       "descr": "Product description 3.1",
       "category": "1",
@@ -128,7 +128,7 @@
     },
     {
       "id": 12,
-      "imgUrl": "https://pixabay.com/get/g5edbc3ce4c27c8f58dc49e9754fbffabc5ce1186d97932933b2d9a7cf7bfcbc7b511d062e82fb2c80f2280d98f01a3606720b596710152417f172d8b197e4b38_640.jpg",
+      "imgUrl": "",
       "title": "Dishs",
       "descr": "Product description 3.2",
       "category": "5",
@@ -137,7 +137,7 @@
     },
     {
       "id": 13,
-      "imgUrl": "https://pixabay.com/get/ga0e8df9ed36b4f03527e3fef6a0bad001fe2b5ce445535d9059bc6d4708b6f99e0d6aff4211d924135f1e5fbdadf1cad808b9d1b8c3507acecfce56b4ccaaf25_640.jpg",
+      "imgUrl": "",
       "title": "Cutlery",
       "descr": "Product description 3.3",
       "category": "2",
@@ -146,7 +146,7 @@
     },
     {
       "id": 14,
-      "imgUrl": "https://pixabay.com/get/gd0a8503f6130757773135e1c7c97154673f6f992346735389193f0525878a8d149775ee67b7273629bc8b5c9eea322539fcdb395c3f65a6039daccb2ba4b8158_640.png",
+      "imgUrl": "",
       "title": "Brew kettle",
       "descr": "Product description 3.4",
       "category": "3",
@@ -155,7 +155,7 @@
     },
     {
       "id": 15,
-      "imgUrl": "https://pixabay.com/get/g571abffd57f7954ac1b65a22740406342fd68c75691ce69ab037480a6760bb349190a06620b5aab5e3df2ac86dfa812d_640.jpg",
+      "imgUrl": "",
       "title": "Bowl",
       "descr": "Product description 3.5",
       "category": "4",
@@ -164,7 +164,7 @@
     },
     {
       "id": 16,
-      "imgUrl": "https://pixabay.com/get/g9993c274712d5efacfc100897466061aff247185215f1a9117e373a4e3bc14889b794f414fb3330621bf9a931683414d140965ecf95303beacb2aed29e650b6c_640.png",
+      "imgUrl": "",
       "title": "Couch",
       "descr": "Product description 4.1",
       "category": "1",
@@ -173,7 +173,7 @@
     },
     {
       "id": 17,
-      "imgUrl": "https://pixabay.com/get/gc86947bb4c2fe473f005309cb83f510db01b7308cd57c6e03091f88e0c93080c5e51521dde4d6cae773a57641e096f1cec3228395d8181b2648f4766f875a767_640.jpg",
+      "imgUrl": "",
       "title": "Chair",
       "descr": "Product description 4.2",
       "category": "5",
@@ -182,7 +182,7 @@
     },
     {
       "id": 18,
-      "imgUrl": "https://pixabay.com/get/gcc7bb2ea72e536b30cd058eab43adf59cd590ce126c66ea0b81766ee700e806fa8ccca42c94b1f85e913b07360e50c2564324ed1faf433b24360fd780d7ce1e0_640.jpg",
+      "imgUrl": "",
       "title": "Sofa",
       "descr": "Product description 4.3",
       "category": "2",
@@ -191,7 +191,7 @@
     },
     {
       "id": 19,
-      "imgUrl": "https://pixabay.com/get/gaab28f4f5ae6f45c1d1387f0a39de996c4d81fe775df07da8461613213c812c6426ad13c8b62accb65ac700e2a21f7ad_640.jpg",
+      "imgUrl": "",
       "title": "Crib",
       "descr": "Product description 4.4",
       "category": "3",
@@ -200,7 +200,7 @@
     },
     {
       "id": 20,
-      "imgUrl": "https://pixabay.com/get/gd2e2720428c75c8e69252462ba58c6804e931336bc7f958beaa4121d009c0613fbf60955036163f61383291334fb718dee116f75b8088d5322ceb5cabfeac466_640.jpg",
+      "imgUrl": "",
       "title": "Home office",
       "descr": "Product description 4.5",
       "category": "4",
@@ -209,7 +209,7 @@
     },
     {
       "id": 21,
-      "imgUrl": "https://pixabay.com/get/gf4531a5ac5b92d36a0f97294caa1d270388f75636feb3ca9c6947ee38a94a6edf4708b8d6ca2efa8536ed0755e4ab013cfd2e77a9fbb1456de6c327b3e415181_640.jpg",
+      "imgUrl": "",
       "title": "Mercedes Benz",
       "descr": "Product description 5.1",
       "category": "1",
@@ -218,7 +218,7 @@
     },
     {
       "id": 22,
-      "imgUrl": "https://pixabay.com/get/g98d7d7bc4f660838fed2dee48fc180966156b7b914647d69f574233f13ca0e4b1de14282e2e5620229c9781360de4a23_640.jpg",
+      "imgUrl": "",
       "title": "Mustang",
       "descr": "Product description 5.2",
       "category": "5",
@@ -227,7 +227,7 @@
     },
     {
       "id": 23,
-      "imgUrl": "https://pixabay.com/get/g18d6545630a0c0a2b082d15c4bc32d18b0a14a06f2ace50c4a921e0e61feb6a21de086df31f8237efc81c2e8e90805f5437c093178138c5d03ff5d43ead47633_640.jpg",
+      "imgUrl": "",
       "title": "Sportcar",
       "descr": "Product description 5.3",
       "category": "2",
@@ -236,7 +236,7 @@
     },
     {
       "id": 24,
-      "imgUrl": "https://pixabay.com/get/ga8294b74fa90a636580bb309fd6fb1cee9cb309ff947a0946b434d082382f814bf8d6fa0338f23583c538df24c7381cb7a88ccf75ca95ba3e20d4c1fad2583bb_640.jpg",
+      "imgUrl": "",
       "title": "Dreamcar",
       "descr": "Product description 5.4",
       "category": "3",
@@ -245,7 +245,7 @@
     },
     {
       "id": 25,
-      "imgUrl": "https://pixabay.com/get/g03fa10c3a99d173a7776324d5dfb746f529c5b9e8c6385ca9205b65608963eead70bcfc6a99a94a0e0d05d692b6cdff91abe039ca340db825bc0181f1b28b53b_640.jpg",
+      "imgUrl": "",
       "title": "Tuktuk",
       "descr": "Product description 5.5",
       "category": "4",

@@ -1,10 +1,12 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import fetchProduct from 'api/productApi';
 import Loader from 'react-loader-spinner';
 import Container from 'components/Container';
 import AppBar from 'components/AppBar/AppBar';
 import errorImage from 'pages/NotFoundView/error.jpg';
+import 'api/baseUrl';
 import 'App.css';
 
 const ShopsView = lazy(() =>
@@ -20,6 +22,26 @@ const NotFoundView = lazy(() =>
 );
 
 export default function App() {
+  const [cart, setCart] = useState([]);
+
+  const addToCart = id => {
+    const productDuplication = cart.filter(obj => obj.id === id);
+
+    if (productDuplication.length > 0) {
+      toast.error('This item is already in the cart!');
+      return;
+    }
+
+    fetchProduct(id).then(product => {
+      setCart([...cart, product]);
+    });
+  };
+
+  const removeFromCart = id => {
+    const newCart = cart.filter(obj => obj.id !== id);
+    setCart(newCart);
+  };
+
   return (
     <Container title="Delivery App">
       <AppBar />
@@ -45,8 +67,11 @@ export default function App() {
         }
       >
         <Routes>
-          <Route path="" element={<ShopsView />} />
-          <Route path="/cart" element={<CartView />} />
+          <Route path="" element={<ShopsView onClick={addToCart} />} />
+          <Route
+            path="/cart"
+            element={<CartView cart={cart} onClick={removeFromCart} />}
+          />
           <Route
             path="*"
             element={
