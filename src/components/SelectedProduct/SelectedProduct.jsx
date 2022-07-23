@@ -9,7 +9,7 @@ export default function SelectedProduct({
   title,
   category,
   price,
-  qwantity = 1,
+  qwantity,
   onSelect,
   onClick,
 }) {
@@ -26,10 +26,15 @@ export default function SelectedProduct({
       <h2>{title}</h2>
       <p>Category: {category}</p>
       <p>Price: ${price}</p>
-      <form className={s.form} onChange={handleSelect}>
+      <form className={s.form}>
         <label className={s.formItem}>Qwantity: </label>
-        <select className={s.formItem} name="qwantity" id="qwantity">
-          <option value={qwantity}>{qwantity}</option>
+        <select
+          className={s.formItem}
+          name="qwantity"
+          id="qwantity"
+          defaultValue={qwantity}
+          onChange={handleSelect}
+        >
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -56,5 +61,7 @@ SelectedProduct.propTypes = {
   description: PropTypes.string,
   category: PropTypes.string,
   price: PropTypes.number,
+  qwantity: PropTypes.string,
+  onSelect: PropTypes.func.isRequired,
   onClick: PropTypes.func.isRequired,
 };

@@ -4,11 +4,21 @@ import Blank from 'components/Blank';
 import imageBlank from 'images/cartEmpty.jpg';
 import s from './CartBar.module.css';
 
-export default function CartBar({ cart, onClick }) {
+export default function CartBar({
+  cart,
+  qwantityList,
+  onSelectQwantityList,
+  onClick,
+}) {
   return (
     <div className={s.cartbar}>
       {cart.length > 0 ? (
-        <CartList cart={cart} onClick={onClick} />
+        <CartList
+          cart={cart}
+          qwantityList={qwantityList}
+          onSelectQwantityList={onSelectQwantityList}
+          onClick={onClick}
+        />
       ) : (
         <Blank title="Your cart is empty" image={imageBlank} alt="Empty cart" />
       )}

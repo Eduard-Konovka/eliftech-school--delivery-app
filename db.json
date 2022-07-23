@@ -29,7 +29,7 @@
   "products": [
     {
       "id": 1,
-      "imgUrl": "https://pixabay.com/get/ge2345d5700eb3515ba68d8dfa750dba73fb4a93c35fe895d92d31f912206eb60364c119ec5badd756480bd13a29ec838_640.jpg",
+      "imgUrl": "",
       "title": "Berries",
       "descr": "Product description 1.1",
       "category": "1",
@@ -38,7 +38,7 @@
     },
     {
       "id": 2,
-      "imgUrl": "https://pixabay.com/get/g400944b33be7ce8878844add7e9011a7586a8030e41e8239e3dc16fd9d27f3f3e1cfc6acf88622a5dee102b730a126e645aa4b250cb39155e544548be7fbf7fa_640.jpg",
+      "imgUrl": "",
       "title": "Coffee",
       "descr": "Product description 1.2",
       "category": "5",
@@ -47,7 +47,7 @@
     },
     {
       "id": 3,
-      "imgUrl": "https://pixabay.com/get/gc83cd31b621b7b0203ca42be098d97e76c40ada11734f6865da53ec8b99ca80b510d1c63e36a0a30f65548ab5cdd5a62_640.jpg",
+      "imgUrl": "",
       "title": "Olive oil",
       "descr": "Product description 1.3",
       "category": "2",
@@ -56,7 +56,7 @@
     },
     {
       "id": 4,
-      "imgUrl": "https://pixabay.com/get/gb9d014af6aa06fac20cce66140cd8521b1e59aa7f461a72dd90e4d18d0e14fc848ff2f6be14c5e4d9bc84506c0a66a46a22124a4491bb7eec9c6e760b8a869ba_640.jpg",
+      "imgUrl": "",
       "title": "Almonds",
       "descr": "Product description 1.4",
       "category": "3",
@@ -65,7 +65,7 @@
     },
     {
       "id": 5,
-      "imgUrl": "https://pixabay.com/get/gbfd52249d73c153173f59d3b7d2a494c246f7dfaf617878feea15c3a7acc64bbd4351f63dbebc5edbc56d87dd12d7e97e4a683ed58b2759f955da6dc2a08ca50_640.jpg",
+      "imgUrl": "",
       "title": "Salmon",
       "descr": "Product description 1.5",
       "category": "4",
@@ -74,7 +74,7 @@
     },
     {
       "id": 6,
-      "imgUrl": "https://pixabay.com/get/g5557deb10c66f2e2e70bafb1ee015c067b671e5bb5e0fee78a909c818e0b613b24dba08123564ebfdfdba3dc5218894463a435b94bebddf5d02ff528f8fc4f4c_640.jpg",
+      "imgUrl": "",
       "title": "Tea",
       "descr": "Product description 1.6",
       "category": "1",

@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from 'react';
+import { lazy, Suspense, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import fetchProduct from 'api/productApi';
@@ -23,6 +23,7 @@ const NotFoundView = lazy(() =>
 
 export default function App() {
   const [cart, setCart] = useState([]);
+  const [qwantityList, setQwantityList] = useState({});
 
   const addToCart = id => {
     const productDuplication = cart.filter(obj => obj.id === id);
@@ -41,6 +42,14 @@ export default function App() {
     const newCart = cart.filter(obj => obj.id !== id);
     setCart(newCart);
   };
+
+  const changeQwantityList = obj => {
+    setQwantityList({ ...qwantityList, ...obj });
+  };
+
+  useEffect(() => {
+    console.log(qwantityList);
+  }, [qwantityList]);
 
   return (
     <Container title="Delivery App">
@@ -70,7 +79,14 @@ export default function App() {
           <Route path="" element={<ShopsView onClick={addToCart} />} />
           <Route
             path="/cart"
-            element={<CartView cart={cart} onClick={removeFromCart} />}
+            element={
+              <CartView
+                cart={cart}
+                qwantityList={qwantityList}
+                onSelectQwantityList={changeQwantityList}
+                onClick={removeFromCart}
+              />
+            }
           />
           <Route
             path="*"
