@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Button from 'components/Button';
-import s from './SelectedProduct.module.css';
 import defaultImage from './default.jpg';
+import s from './SelectedProduct.module.css';
 
 export default function SelectedProduct({
   id,
@@ -10,14 +10,18 @@ export default function SelectedProduct({
   category,
   price,
   qwantity,
-  onSelect,
-  onClick,
+  cost,
+  onSelectQwantity,
+  onDeleteProduct,
 }) {
   const handleSelect = e => {
-    const obj = {};
-    obj[id] = e.target.value;
+    const obj = {
+      id: id,
+      qwantity: e.target.value,
+      cost: price * e.target.value,
+    };
 
-    onSelect(obj);
+    onSelectQwantity(obj);
   };
 
   return (
@@ -26,14 +30,13 @@ export default function SelectedProduct({
       <h2>{title}</h2>
       <p>Category: {category}</p>
       <p>Price: ${price}</p>
-      <form className={s.form}>
+      <form className={s.form} onChange={handleSelect}>
         <label className={s.formItem}>Qwantity: </label>
         <select
           className={s.formItem}
           name="qwantity"
           id="qwantity"
           defaultValue={qwantity}
-          onChange={handleSelect}
         >
           <option value="1">1</option>
           <option value="2">2</option>
@@ -47,8 +50,8 @@ export default function SelectedProduct({
           <option value="10">10</option>
         </select>
       </form>
-      <p>Стоимость: </p>
-      <Button type="button" onClick={onClick}>
+      <p>Cost: ${cost}</p>
+      <Button type="button" onClick={onDeleteProduct}>
         Delete
       </Button>
     </div>
@@ -61,7 +64,8 @@ SelectedProduct.propTypes = {
   description: PropTypes.string,
   category: PropTypes.string,
   price: PropTypes.number,
-  qwantity: PropTypes.string,
-  onSelect: PropTypes.func.isRequired,
-  onClick: PropTypes.func.isRequired,
+  qwantity: PropTypes.number,
+  cost: PropTypes.number,
+  onSelectQwantity: PropTypes.func.isRequired,
+  onDeleteProduct: PropTypes.func.isRequired,
 };

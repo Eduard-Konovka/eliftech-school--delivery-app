@@ -6,3 +6,15 @@
   margin-bottom: 10px;
   background-color: #fff6f1;
 }
+
+.priceBox {
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.totalPrice {
+  margin: 0 40px;
+  font-weight: 700;
+}

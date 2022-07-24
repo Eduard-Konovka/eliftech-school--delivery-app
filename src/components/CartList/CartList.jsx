@@ -2,12 +2,7 @@ import PropTypes from 'prop-types';
 import SelectedProduct from 'components/SelectedProduct';
 import s from './CartList.module.css';
 
-export default function CartList({
-  cart,
-  qwantityList,
-  onSelectQwantityList,
-  onClick,
-}) {
+export default function CartList({ cart, onSelectQwantity, onDeleteProduct }) {
   return (
     <ul className={s.list}>
       {cart.map(item => (
@@ -18,9 +13,10 @@ export default function CartList({
             title={item.title}
             category={item.category}
             price={item.price}
-            qwantity={qwantityList[item.id]}
-            onSelect={onSelectQwantityList}
-            onClick={() => onClick(item.id)}
+            qwantity={item.qwantity}
+            cost={item.cost}
+            onSelectQwantity={onSelectQwantity}
+            onDeleteProduct={() => onDeleteProduct(item.id)}
           />
         </li>
       ))}
@@ -34,4 +30,6 @@ CartList.propTypes = {
       id: PropTypes.number.isRequired,
     }),
   ),
+  onSelectQwantity: PropTypes.func.isRequired,
+  onDeleteProduct: PropTypes.func.isRequired,
 };

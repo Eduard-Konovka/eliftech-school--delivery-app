@@ -1,8 +1,8 @@
 import { lazy, Suspense, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
-import fetchProduct from 'api/productApi';
 import Loader from 'react-loader-spinner';
+import fetchProduct from 'api/productApi';
 import Container from 'components/Container';
 import AppBar from 'components/AppBar/AppBar';
 import errorImage from 'pages/NotFoundView/error.jpg';
@@ -23,7 +23,12 @@ const NotFoundView = lazy(() =>
 
 export default function App() {
   const [cart, setCart] = useState([]);
-  const [qwantityList, setQwantityList] = useState({});
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [user, setUser] = useState({});
+
+  useEffect(() => {
+    setTotalPrice(cart.reduce((acc, obj) => acc + obj.cost, 0));
+  }, [cart]);
 
   const addToCart = id => {
     const productDuplication = cart.filter(obj => obj.id === id);
@@ -34,6 +39,8 @@ export default function App() {
     }
 
     fetchProduct(id).then(product => {
+      product.qwantity = 1;
+      product.cost = product.price;
       setCart([...cart, product]);
     });
   };
@@ -43,13 +50,24 @@ export default function App() {
     setCart(newCart);
   };
 
-  const changeQwantityList = obj => {
-    setQwantityList({ ...qwantityList, ...obj });
+  const changeQwantity = obj => {
+    const setQwantity = item => {
+      item.qwantity = Number(obj.qwantity);
+      item.cost = obj.cost;
+      return item;
+    };
+
+    setCart(
+      cart.map(product =>
+        product.id === obj.id ? setQwantity(product) : product,
+      ),
+    );
   };
 
-  useEffect(() => {
-    console.log(qwantityList);
-  }, [qwantityList]);
+  const submitCart = () => {
+    console.log(cart, totalPrice, user);
+    setCart([]);
+  };
 
   return (
     <Container title="Delivery App">
@@ -82,9 +100,10 @@ export default function App() {
             element={
               <CartView
                 cart={cart}
-                qwantityList={qwantityList}
-                onSelectQwantityList={changeQwantityList}
-                onClick={removeFromCart}
+                totalPrice={totalPrice}
+                onSelectQwantity={changeQwantity}
+                onDeleteProduct={removeFromCart}
+                onSubmit={submitCart}
               />
             }
           />
