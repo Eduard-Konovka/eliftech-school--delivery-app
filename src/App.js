@@ -10,15 +10,13 @@ import 'api/baseUrl';
 import 'App.css';
 
 const ShopsView = lazy(() =>
-  import('./pages/ShopsView/ShopsView.jsx' /* webpackChunkName: "ShopsView" */),
+  import('pages/ShopsView' /* webpackChunkName: "ShopsView" */),
 );
 const CartView = lazy(() =>
-  import('./pages/CartView/CartView.jsx' /* webpackChunkName: "CartView" */),
+  import('pages/CartView' /* webpackChunkName: "CartView" */),
 );
 const NotFoundView = lazy(() =>
-  import(
-    './pages/NotFoundView/NotFoundView.jsx' /* webpackChunkName: "NotFoundView" */
-  ),
+  import('pages/NotFoundView' /* webpackChunkName: "NotFoundView" */),
 );
 
 export default function App() {
