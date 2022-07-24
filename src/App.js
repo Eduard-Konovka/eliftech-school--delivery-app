@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import Loader from 'react-loader-spinner';
 import fetchProduct from 'api/productApi';
+import sendСart from 'api/submitApi';
 import Container from 'components/Container';
 import AppBar from 'components/AppBar/AppBar';
 import errorImage from 'pages/NotFoundView/error.jpg';
@@ -28,10 +29,6 @@ export default function App() {
   useEffect(() => {
     setTotalPrice(cart.reduce((acc, obj) => acc + obj.cost, 0));
   }, [cart]);
-
-  const handleShopsView = () => {
-    setSending(false);
-  };
 
   const hendleUser = obj => {
     setUser({ ...user, ...obj });
@@ -95,7 +92,11 @@ export default function App() {
     setCart([]);
     setUser({});
     setSending(true);
-    console.log(cart, totalPrice, user);
+    sendСart({ user, cart, totalPrice }).finally(
+      setTimeout(() => {
+        setSending(false);
+      }, 5000),
+    );
   };
 
   return (
@@ -123,15 +124,7 @@ export default function App() {
         }
       >
         <Routes>
-          <Route
-            path=""
-            element={
-              <ShopsView
-                handleShopsView={handleShopsView}
-                onClick={addToCart}
-              />
-            }
-          />
+          <Route path="" element={<ShopsView onClick={addToCart} />} />
           <Route
             path="/cart"
             element={
