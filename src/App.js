@@ -25,10 +25,19 @@ export default function App() {
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [user, setUser] = useState({});
+  const [sending, setSending] = useState(false);
 
   useEffect(() => {
     setTotalPrice(cart.reduce((acc, obj) => acc + obj.cost, 0));
   }, [cart]);
+
+  const handleShopsView = () => {
+    setSending(false);
+  };
+
+  const hendleUser = obj => {
+    setUser({ ...user, ...obj });
+  };
 
   const addToCart = id => {
     const productDuplication = cart.filter(obj => obj.id === id);
@@ -65,8 +74,30 @@ export default function App() {
   };
 
   const submitCart = () => {
-    console.log(cart, totalPrice, user);
+    if (!user.name) {
+      toast.error('Fill in the client data in the field "Name"!');
+      return;
+    }
+
+    if (!user.email) {
+      toast.error('Fill in the client data in the field "Email"!');
+      return;
+    }
+
+    if (!user.phone) {
+      toast.error('Fill in the client data in the field "Phone"!');
+      return;
+    }
+
+    if (!user.address) {
+      toast.error('Fill in the client data in the field "Address"!');
+      return;
+    }
+
     setCart([]);
+    setUser({});
+    setSending(true);
+    console.log(cart, totalPrice, user);
   };
 
   return (
@@ -94,11 +125,22 @@ export default function App() {
         }
       >
         <Routes>
-          <Route path="" element={<ShopsView onClick={addToCart} />} />
+          <Route
+            path=""
+            element={
+              <ShopsView
+                handleShopsView={handleShopsView}
+                onClick={addToCart}
+              />
+            }
+          />
           <Route
             path="/cart"
             element={
               <CartView
+                user={user}
+                setUser={hendleUser}
+                sending={sending}
                 cart={cart}
                 totalPrice={totalPrice}
                 onSelectQwantity={changeQwantity}

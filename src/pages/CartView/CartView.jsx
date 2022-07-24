@@ -4,6 +4,9 @@ import CartBar from 'components/CartBar';
 import s from './CartView.module.css';
 
 export default function CartView({
+  user,
+  setUser,
+  sending,
   cart,
   totalPrice,
   onSelectQwantity,
@@ -12,8 +15,9 @@ export default function CartView({
 }) {
   return (
     <div className={s.cartpage}>
-      <UserBar />
+      <UserBar user={user} setUser={setUser} />
       <CartBar
+        sending={sending}
         cart={cart}
         totalPrice={totalPrice}
         onSelectQwantity={onSelectQwantity}
