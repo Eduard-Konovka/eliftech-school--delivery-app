@@ -31,7 +31,7 @@
     "predeploy": "npm run build",
     "deploy": "netlify deploy -p",
     "prepare": "husky install",
-    "api-server": "json-server --watch db.json --port 3004 --delay 300"
+    "api-server": "json-server --watch db.json --port 4000 --delay 300"
   },
   "repository": {
     "type": "git",
