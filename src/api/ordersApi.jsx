@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const submitApi = data => {
+const ordersApi = data => {
   return axios
-    .post('/orders', data)
+    .post('/api/orders', data)
     .then(response =>
       toast.success(
         `Status: ${response.status}. Cart contents successfully accepted for processing. Thanks for your order!`,
@@ -14,4 +14,4 @@ const submitApi = data => {
     );
 };
 
-export default submitApi;
+export default ordersApi;

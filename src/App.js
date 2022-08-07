@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import Loader from 'react-loader-spinner';
 import fetchProduct from 'api/productApi';
-import sendСart from 'api/submitApi';
+import sendСart from 'api/ordersApi';
 import Container from 'components/Container';
 import AppBar from 'components/AppBar/AppBar';
 import errorImage from 'pages/NotFoundView/error.jpg';
