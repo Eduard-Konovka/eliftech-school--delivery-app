@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import fetchShops from 'api/shopsApi';
 import Spinner from 'components/Spinner';
 import ShopsList from 'components/ShopsList';
@@ -29,3 +30,7 @@ export default function ShopsBar({ onClick }) {
     </div>
   );
 }
+
+ShopsBar.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};

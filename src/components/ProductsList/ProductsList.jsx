@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Product from 'components/Product';
 import s from './ProductsList.module.css';
 
-export default function ProductsList({ products = [], shopId, onClick }) {
+export default function ProductsList({ products, shopId, onClick }) {
   const shopProducts = products.filter(obj => obj.shopId === shopId);
 
   return (
@@ -26,9 +26,9 @@ export default function ProductsList({ products = [], shopId, onClick }) {
 ProductsList.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
     }),
   ),
-  shopId: PropTypes.number,
+  shopId: PropTypes.string,
   onClick: PropTypes.func.isRequired,
 };

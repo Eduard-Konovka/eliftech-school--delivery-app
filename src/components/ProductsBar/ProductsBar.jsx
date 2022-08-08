@@ -38,6 +38,6 @@ export default function ProductsBar({ shopId, onClick }) {
 }
 
 ProductsBar.propTypes = {
-  shopId: PropTypes.number,
+  shopId: PropTypes.string,
   onClick: PropTypes.func.isRequired,
 };
