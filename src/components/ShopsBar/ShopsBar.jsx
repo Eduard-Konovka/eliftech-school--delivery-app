@@ -14,9 +14,7 @@ export default function ShopsBar({ onClick }) {
     setLoading(true);
 
     fetchShops()
-      .then(shops => {
-        setShops(shops);
-      })
+      .then(shops => setShops(shops))
       .catch(error => setError(error))
       .finally(() => setLoading(false));
   }, []);

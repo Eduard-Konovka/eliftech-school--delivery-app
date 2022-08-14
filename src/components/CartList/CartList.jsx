@@ -6,9 +6,9 @@ export default function CartList({ cart, onSelectQwantity, onDeleteProduct }) {
   return (
     <ul className={s.list}>
       {cart.map(item => (
-        <li key={item.id}>
+        <li key={item._id}>
           <SelectedProduct
-            id={item.id}
+            _id={item._id}
             imageUrl={item.imgUrl}
             title={item.title}
             category={item.category}
@@ -16,7 +16,7 @@ export default function CartList({ cart, onSelectQwantity, onDeleteProduct }) {
             qwantity={item.qwantity}
             cost={item.cost}
             onSelectQwantity={onSelectQwantity}
-            onDeleteProduct={() => onDeleteProduct(item.id)}
+            onDeleteProduct={() => onDeleteProduct(item._id)}
           />
         </li>
       ))}
@@ -27,7 +27,7 @@ export default function CartList({ cart, onSelectQwantity, onDeleteProduct }) {
 CartList.propTypes = {
   cart: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      _id: PropTypes.string.isRequired,
     }),
   ),
   onSelectQwantity: PropTypes.func.isRequired,

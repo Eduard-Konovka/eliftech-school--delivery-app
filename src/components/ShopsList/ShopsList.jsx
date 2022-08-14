@@ -5,8 +5,8 @@ export default function ShopsList({ shops, onClick }) {
   return (
     <ul className={s.list}>
       {shops.map(el => (
-        <li key={el.id}>
-          <Shop title={el.title} id={el.id} onClick={() => onClick(el.id)} />
+        <li key={el._id}>
+          <Shop title={el.title} shopId={el.shopId} onClick={onClick} />
         </li>
       ))}
     </ul>

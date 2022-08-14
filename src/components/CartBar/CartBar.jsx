@@ -48,7 +48,7 @@ export default function CartBar({
 CartBar.propTypes = {
   cart: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      _id: PropTypes.string.isRequired,
     }),
   ),
   totalPrice: PropTypes.number.isRequired,

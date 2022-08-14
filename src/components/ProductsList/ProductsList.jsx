@@ -8,14 +8,14 @@ export default function ProductsList({ products, shopId, onClick }) {
   return (
     <ul className={s.list}>
       {shopProducts.map(item => (
-        <li key={item.id}>
+        <li key={item._id}>
           <Product
             imageUrl={item.imgUrl}
             title={item.title}
             description={item.descr}
             category={item.category}
             price={item.price}
-            onClick={() => onClick(item.id)}
+            onClick={() => onClick(item._id)}
           />
         </li>
       ))}
@@ -26,7 +26,7 @@ export default function ProductsList({ products, shopId, onClick }) {
 ProductsList.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      _id: PropTypes.string.isRequired,
     }),
   ),
   shopId: PropTypes.string,

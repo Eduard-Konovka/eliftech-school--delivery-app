@@ -34,23 +34,23 @@ export default function App() {
     setUser({ ...user, ...obj });
   };
 
-  const addToCart = id => {
-    const productDuplication = cart.filter(obj => obj.id === id);
+  const addToCart = _id => {
+    const productDuplication = cart.filter(obj => obj._id === _id);
 
     if (productDuplication.length > 0) {
       toast.error('This item is already in the cart!');
       return;
     }
 
-    fetchProduct(id).then(product => {
+    fetchProduct(_id).then(product => {
       product.qwantity = 1;
       product.cost = product.price;
       setCart([...cart, product]);
     });
   };
 
-  const removeFromCart = id => {
-    const newCart = cart.filter(obj => obj.id !== id);
+  const removeFromCart = _id => {
+    const newCart = cart.filter(obj => obj._id !== _id);
     setCart(newCart);
   };
 
@@ -63,7 +63,7 @@ export default function App() {
 
     setCart(
       cart.map(product =>
-        product.id === obj.id ? setQwantity(product) : product,
+        product._id === obj._id ? setQwantity(product) : product,
       ),
     );
   };

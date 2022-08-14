@@ -4,7 +4,7 @@ import defaultImage from './default.jpg';
 import s from './SelectedProduct.module.css';
 
 export default function SelectedProduct({
-  id,
+  _id,
   imageUrl,
   title,
   category,
@@ -16,7 +16,7 @@ export default function SelectedProduct({
 }) {
   const handleSelect = e => {
     const obj = {
-      id: id,
+      _id,
       qwantity: e.target.value,
       cost: price * e.target.value,
     };

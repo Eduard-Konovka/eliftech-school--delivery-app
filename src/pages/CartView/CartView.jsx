@@ -31,7 +31,7 @@ export default function CartView({
 CartView.propTypes = {
   cart: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      _id: PropTypes.string.isRequired,
     }),
   ),
   totalPrice: PropTypes.number.isRequired,
