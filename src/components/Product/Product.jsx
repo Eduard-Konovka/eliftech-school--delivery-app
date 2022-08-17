@@ -13,7 +13,14 @@ export default function Product({
 }) {
   return (
     <div className={s.container}>
-      <img src={imageUrl ? imageUrl : defaultImage} alt={title} />
+      <img
+        src={
+          imageUrl
+            ? `${process.env.REACT_APP_URL}/images/${imageUrl}`
+            : defaultImage
+        }
+        alt={title}
+      />
       <h2>{title}</h2>
       <p>{description}</p>
       <p>Category: {category}</p>
