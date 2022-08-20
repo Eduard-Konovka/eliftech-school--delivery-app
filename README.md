@@ -7,7 +7,7 @@ automatic calculation of the order amount.
 ## Description
 
 The project was created using the "React" framework in combination with the
-"Node.js" back-end on the basis of a server on the "Express" framework connected
+"Node.js" back end on the basis of a server on the "Express" framework connected
 to the "MongoDB" database.
 
 The web server project is located
@@ -15,7 +15,7 @@ The web server project is located
 
 ## Application launch instructions
 
-This app uses a back-end server at
+This app uses a back end server at
 [https://delivery-app-eduard-konovka.herokuapp.com/](https://delivery-app-eduard-konovka.herokuapp.com)
 
 - The `/api/shops` endpoint is used to get the list of stores
