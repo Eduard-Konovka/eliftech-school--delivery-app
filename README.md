@@ -15,9 +15,9 @@ to the "MongoDB" database.
 This app uses a back-end server at
 [https://delivery-app-eduard-konovka.herokuapp.com/](https://delivery-app-eduard-konovka.herokuapp.com)
 
-- Для получения списка магазинов используется маршрут /api/shops
-- Для получения списка товаров используется маршрут /api/products
-- Для отправки заказа используется маршрут /api/orders
+- The route `/api/shops` is used to get the list of stores
+- The route `/api/products` is used to get the list of stores
+- The `/api/orders` route is used to send orders
 
 ## Script commands in console:
 
