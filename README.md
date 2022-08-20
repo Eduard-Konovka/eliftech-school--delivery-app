@@ -18,9 +18,9 @@ The web server project is located
 This app uses a back-end server at
 [https://delivery-app-eduard-konovka.herokuapp.com/](https://delivery-app-eduard-konovka.herokuapp.com)
 
-- The route `/api/shops` is used to get the list of stores
-- The route `/api/products` is used to get the list of stores
-- The `/api/orders` route is used to send orders
+- The `/api/shops` endpoint is used to get the list of stores
+- The `/api/products` endpoint is used to get the list of stores
+- The `/api/orders` endpoint is used to send orders
 
 ## Script commands in console:
 
