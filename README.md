@@ -1,39 +1,27 @@
-# Лайт-сборка Create React App
+# Web application of a basic online store
 
-Базовая сборка Create React App + React Router DOM + Modern Normalize +
-Prettier + Husky + ESLint + Classnames + ShortId + React Icons +
-React-Toastify + react-spinner-loader + Axios + deploy GitHub Pages
+A single-page web application of a simple online store that allows you to select
+the necessary product from the proposed range in the right quantity with
+automatic calculation of the order amount.
 
-## Для установки сборки:
+## Description
 
-1. Копируем этот репозиторий себе.
+The project was created using the "React" framework in combination with the
+"Node.js" back-end on the basis of a server on the "Express" framework connected
+to the "MongoDB" database.
 
-2. Открываем в VSCode и запускаем в консоли команду `npm ci` чтобы установить
-   загрузчики и плагины из перечня "package-lock.json".
+## Application launch instructions
 
-3. Меняем под себя значения ключа в файле "package-lock.json":
-   `"name": "react-default"` на `"name": "имя_вашего_проекта"` или просто
-   `"name": ""`
+This app uses a back-end server at
+[https://delivery-app-eduard-konovka.herokuapp.com/](https://delivery-app-eduard-konovka.herokuapp.com)
 
-4. Меняем под себя значения ключей в файле "package.json":
-   1. `"name": "react-default"` на `"name": "имя_вашего_проекта"` или просто
-      `"name": ""`;
-   2. В параметрах "repository" -
-      `"url": "git+https://github.com/Eduard-Konovka/react-default.git"` на
-      `"url": "git+https://github.com/ваше_имя_на_ГитХабе/имя_вашего_проекта.git"`;
-   3. В параметрах "bugs" -
-      `"url": "https://github.com/Eduard-Konovka/react-default.git/issues"` на
-      `"url": "https://github.com/ваше_имя_на_ГитХабе/имя_вашего_проекта.git/issues"`;
-   4. `"author": "Eduard Konovka <ed098ua@gmail.com>"` на
-      `"author": "Ваше_имя <ваш_e-mail>"` или просто `"author": ""`;
-   5. `"homepage": "https://Eduard-Konovka.github.io/react-default"` на
-      `"homepage": "https://ваше_имя_на_ГитХабе.github.io/имя_вашего_проекта"`.
+- Для получения списка магазинов используется маршрут /api/shops
+- Для получения списка товаров используется маршрут /api/products
+- Для отправки заказа используется маршрут /api/orders
 
-## Команды скриптов в консоли bash:
+## Script commands in console:
 
-Вас интересуют первых два скрипта: `npm start` и `npm run deploy` :)
-
-### `npm start`
+#### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -41,17 +29,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm run deploy`
+#### `npm run deploy`
 
-Deploy development files to GitHub.
+Deploy development files to Netlify.
 
-### `npm test`
+#### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests)
 for more information.
 
-### `npm run build`
+#### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best
@@ -64,7 +52,7 @@ See the section about
 [deployment](https://facebook.github.io/create-react-app/docs/deployment) for
 more information.
 
-### `npm run eject`
+#### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -82,40 +70,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for
 small and middle deployments, and you shouldn’t feel obligated to use this
 feature. However we understand that this tool wouldn’t be useful if you couldn’t
 customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the
-[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
