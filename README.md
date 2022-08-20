@@ -10,6 +10,9 @@ The project was created using the "React" framework in combination with the
 "Node.js" back-end on the basis of a server on the "Express" framework connected
 to the "MongoDB" database.
 
+The web server project is located
+[here](https://github.com/Eduard-Konovka/eliftech-school--delivery-app-api).
+
 ## Application launch instructions
 
 This app uses a back-end server at
