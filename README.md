@@ -16,7 +16,7 @@ The web server project is located
 ## Application launch instructions
 
 This app uses a back end server at
-[https://delivery-app-eduard-konovka.herokuapp.com/](https://delivery-app-eduard-konovka.herokuapp.com).
+[https://delivery-app-eduard-konovka.herokuapp.com](https://delivery-app-eduard-konovka.herokuapp.com).
 
 Accordingly, the REACT_APP_URL environment variable equal to
 https://delivery-app-eduard-konovka.herokuapp.com is used as the base URL for
