@@ -26,7 +26,14 @@ export default function SelectedProduct({
 
   return (
     <div className={s.container}>
-      <img src={imageUrl ? imageUrl : defaultImage} alt={title} />
+      <img
+        src={
+          imageUrl
+            ? `${process.env.REACT_APP_URL}/images/${imageUrl}`
+            : defaultImage
+        }
+        alt={title}
+      />
       <h2>{title}</h2>
       <p>Category: {category}</p>
       <p>Price: ${price}</p>
