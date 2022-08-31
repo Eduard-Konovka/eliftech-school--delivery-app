@@ -38,24 +38,16 @@ export default function SelectedProduct({
       <p>Category: {category}</p>
       <p>Price: ${price}</p>
       <form className={s.form} onChange={handleSelect}>
-        <label className={s.formItem}>Qwantity: </label>
-        <select
+        <label className={s.formItem} htmlFor="qwantity">
+          Qwantity:
+        </label>
+        <input
           className={s.formItem}
+          type="number"
           name="qwantity"
           id="qwantity"
           defaultValue={qwantity}
-        >
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
+        ></input>
       </form>
       <p>Cost: ${cost}</p>
       <Button type="button" onClick={onDeleteProduct}>

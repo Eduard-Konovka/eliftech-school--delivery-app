@@ -11,7 +11,7 @@ export default function UserBar({ user, setUser }) {
 
   return (
     <form className={s.form}>
-      <label className={s.label}>
+      <label className={s.label} htmlFor="name">
         <p className={s.title}>Name:</p>
         <input
           type="text"
