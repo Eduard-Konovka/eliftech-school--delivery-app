@@ -15,6 +15,7 @@ export default function ProductsList({ products, shopId, onClick }) {
             description={item.descr}
             category={item.category}
             price={item.price}
+            available={item.available}
             onClick={() => onClick(item._id)}
           />
         </li>

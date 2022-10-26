@@ -9,6 +9,7 @@ export default function SelectedProduct({
   title,
   category,
   price,
+  available,
   qwantity,
   cost,
   onSelectQwantity,
@@ -37,6 +38,7 @@ export default function SelectedProduct({
       <h2>{title}</h2>
       <p>Category: {category}</p>
       <p>Price: ${price}</p>
+      <p>In stock: {available} units</p>
       <form className={s.form} onChange={handleSelect}>
         <label className={s.formItem} htmlFor="qwantity">
           Qwantity:
@@ -46,6 +48,8 @@ export default function SelectedProduct({
           type="number"
           name="qwantity"
           id="qwantity"
+          min={1}
+          max={available}
           defaultValue={qwantity}
         ></input>
       </form>
@@ -63,6 +67,7 @@ SelectedProduct.propTypes = {
   description: PropTypes.string,
   category: PropTypes.string,
   price: PropTypes.number,
+  available: PropTypes.number,
   qwantity: PropTypes.number,
   cost: PropTypes.number,
   onSelectQwantity: PropTypes.func.isRequired,

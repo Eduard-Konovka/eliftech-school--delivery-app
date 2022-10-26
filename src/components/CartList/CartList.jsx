@@ -13,6 +13,7 @@ export default function CartList({ cart, onSelectQwantity, onDeleteProduct }) {
             title={item.title}
             category={item.category}
             price={item.price}
+            available={item.available}
             qwantity={item.qwantity}
             cost={item.cost}
             onSelectQwantity={onSelectQwantity}

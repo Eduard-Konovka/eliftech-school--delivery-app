@@ -9,6 +9,7 @@ export default function Product({
   description,
   category,
   price,
+  available,
   onClick,
 }) {
   return (
@@ -25,6 +26,7 @@ export default function Product({
       <p>{description}</p>
       <p>Category: {category}</p>
       <p>Price: ${price}</p>
+      <p>In stock: {available} units</p>
       <Button type="button" onClick={onClick}>
         Add to Cart
       </Button>
@@ -38,5 +40,6 @@ Product.propTypes = {
   description: PropTypes.string,
   category: PropTypes.string,
   price: PropTypes.number,
+  available: PropTypes.number,
   onClick: PropTypes.func.isRequired,
 };
