@@ -1,7 +1,7 @@
 import { lazy, Suspense, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
-import Loader from 'react-loader-spinner';
+import { Puff } from 'react-loader-spinner';
 import fetchProduct from 'api/productApi';
 import sendСart from 'api/ordersApi';
 import Container from 'components/Container';
@@ -113,12 +113,15 @@ export default function App() {
               paddingTop: '150px',
             }}
           >
-            <Loader
-              type="Puff"
+            <Puff
+              height="200"
+              width="200"
+              radius={1}
               color="#00BFFF"
-              height={200}
-              width={200}
-              timeout={3000}
+              ariaLabel="puff-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+              visible={true}
             />
           </div>
         }
