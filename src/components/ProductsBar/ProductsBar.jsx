@@ -8,8 +8,8 @@ import imageBlank from 'images/shop.jpg';
 import s from './ProductsBar.module.css';
 
 export default function ProductsBar({ shopId, onClick }) {
-  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -25,9 +25,11 @@ export default function ProductsBar({ shopId, onClick }) {
 
   return (
     <div className={s.productsbar}>
-      {error && <p>Whoops, something went wrong: {error.message}</p>}
       {loading && <Spinner size={70} color="blue" />}
-      {!loading && shopId === null && (
+      {error && (
+        <p className={s.error}>Whoops, something went wrong: {error.message}</p>
+      )}
+      {!loading && !error && shopId === null && (
         <Blank title="Choose a shop" image={imageBlank} alt="Open shop" />
       )}
       {products.length > 0 && (
